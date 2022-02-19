@@ -12,15 +12,19 @@ const bassNotes = [
 bassNotes.forEach((bassFret) => {
   const fret = document.createElement("div");
   fret.className = "fret";
-
+  Tone.start();
   bassFret.reverse().forEach((letter) => {
     const note = document.createElement("div");
     note.className = "note";
     note.textContent = letter;
 
-    note.addEventListener("pointerdown", (evt) => {
+    note.addEventListener("mousedown", (evt) => {
       console.log("touched " + letter);
+      Tone.start();
       synth.triggerAttackRelease(letter, "16n");
+
+      // const now = Tone.now();
+      // synth.triggerAttackRelease(letter, tune.duration, now);
       evt.preventDefault();
     });
     fret.appendChild(note);
