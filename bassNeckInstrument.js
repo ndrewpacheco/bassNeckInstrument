@@ -1,13 +1,13 @@
 const synth = new Tone.Synth().toDestination();
 
-const main = document.querySelector(".main");
-const bassNotes = [
-  ["E1", "A1", "D2", "G2"],
-  ["F1", "A#1", "D#2", "G#2"],
-  ["F#1", "B1", "E2", "A2"],
-  ["G1", "C2", "F2", "A#2"],
-  ["G#1", "C#2", "F#2", "B2"],
-];
+const main = document.querySelector(".bassNeck");
+// const bassNotes = [
+//   ["E1", "A1", "D2", "G2"],
+//   ["F1", "A#1", "D#2", "G#2"],
+//   ["F#1", "B1", "E2", "A2"],
+//   ["G1", "C2", "F2", "A#2"],
+//   ["G#1", "C#2", "F#2", "B2"],
+// ];
 
 const bassStrings = [
   ["E1", "F1", "F#1", "G1", "G#1"],
@@ -39,3 +39,16 @@ bassStrings.forEach((bassString) => {
 
   main.appendChild(fret);
 });
+
+/*
+  todo:
+
+  figure out why sound doesn't start at touch
+  - something with start sound right away
+  - have a card alert with a play button on top before start
+  grid or flexbox? fiugre out layout
+  - align properly when in horizontal mode
+  
+  - get proper eleectric bass sound
+  wood background,
+*/
